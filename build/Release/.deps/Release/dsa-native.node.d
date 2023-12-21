@@ -1,0 +1,1 @@
+cmd_Release/dsa-native.node := ln -f "Release/obj.target/dsa-native.node" "Release/dsa-native.node" 2>/dev/null || (rm -rf "Release/dsa-native.node" && cp -af "Release/obj.target/dsa-native.node" "Release/dsa-native.node")
