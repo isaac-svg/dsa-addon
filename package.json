@@ -7,7 +7,7 @@
     "test": "node --napi-modules ./test/test_binding.js"
   },
   "gypfile": true,
-  "name": "dsa",
+  "name": "dsa-native",
   "version": "1.0.0",
   "description": "Native addons for data sructures and algorithms",
   "keywords": [
