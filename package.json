@@ -6,11 +6,15 @@
   "scripts": {
     "build": "node-gyp rebuild",
     "build:debug": "node-gyp build --debug",
-    "install": "node-gyp install --fallback-to-build",
+    "install": "node-gyp rebuild",
     "pretest": "",
     "test": "",
     "pack": "node-gyp package"
   },
+  "files": [
+    "lib/*.js",
+    "build/Release/*.node"
+  ],
   "gypfile": true,
   "name": "dsa-native",
   "version": "1.1.3",
