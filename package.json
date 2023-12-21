@@ -8,7 +8,7 @@
   },
   "gypfile": true,
   "name": "dsa",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Native addons for data sructures and algorithms",
   "keywords": [
     "Algorithms",
