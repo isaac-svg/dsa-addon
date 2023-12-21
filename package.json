@@ -1,12 +1,15 @@
 {
   "main": "lib/binding.js",
   "dependencies": {
-    "node-addon-api": "^1.1.0"
+    "node-addon-api": "^1.1.1"
   },
   "scripts": {
-    "test": "node --napi-modules ./test/test_binding.js",
-    "build":"node-gyp build"
-
+    "build": "node-pre-gyp build",
+    "build:debug": "node-pre-gyp build --debug",
+    "install": "node-pre-gyp install --fallback-to-build",
+    "pretest": "node test/support/createdb.js",
+    "test": "mocha -R spec --timeout 480000",
+    "pack": "node-pre-gyp package"
   },
   "gypfile": true,
   "name": "dsa-native",
