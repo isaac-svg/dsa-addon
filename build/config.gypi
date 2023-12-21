@@ -409,6 +409,16 @@
     "want_separate_host_toolset": 0,
     "nodedir": "/home/isaac/.cache/node-gyp/20.10.0",
     "python": "/usr/bin/python3",
-    "standalone_static_library": 1
+    "standalone_static_library": 1,
+    "user_agent": "npm/10.2.3 node/v20.10.0 linux x64 workspaces/false",
+    "userconfig": "/home/isaac/.npmrc",
+    "local_prefix": "/home/isaac/Desktop/software_engineering/npm_packages/dsa-addon",
+    "prefix": "/usr/local",
+    "npm_version": "10.2.3",
+    "cache": "/home/isaac/.npm",
+    "node_gyp": "/snap/node/8007/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js",
+    "globalconfig": "/usr/local/etc/npmrc",
+    "init_module": "/home/isaac/.npm-init.js",
+    "global_prefix": "/usr/local"
   }
 }
