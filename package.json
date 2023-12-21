@@ -15,7 +15,14 @@
     "lib/*.js",
     "build/Release/*.node" ,
     "binding.gyp",
-    "build/*"
+    "build/Release/obj.target/dsa-native/src/error-handlers/*.o",
+    "build/Release/*/*/*/*/*/*.o",
+    
+    "build/Release/obj.target/dsa-native/src/dsa.o",
+    "build/dsa-native.target.mk",
+    "build/config.gypi",
+    "build/binding.Makefile"
+
   ],
   "gypfile": true,
   "name": "dsa-native",
