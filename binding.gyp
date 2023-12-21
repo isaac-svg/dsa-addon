@@ -2,7 +2,7 @@
   'targets': [
     {
       'target_name': 'dsa-native',
-      'sources': [ 'src/dsa.cc', 'src/*/*/*.cc',  ],
+      'sources': [ 'src/linkedlist/vector-based/linkedlist.cc','src/linkedlist/pointer-based/linkedlist.cc',  'src/dsa.cc', 'src/error-handlers/*.cc'],
       'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")"],
       'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
       'cflags!': [ '-fno-exceptions' ],

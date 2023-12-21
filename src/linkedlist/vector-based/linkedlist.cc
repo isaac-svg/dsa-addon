@@ -1,6 +1,7 @@
 #include "linkedlist.h"
 #include <iostream>
-namespace LinkedListAddon {
+// namespace LinkedListAddon {
+// using namespace LinkedListAddon;
 
 Napi::Object LinkedList::Init(Napi::Env env, Napi::Object exports) {
     Napi::Function func = DefineClass(env, "LinkedList", {
@@ -156,11 +157,27 @@ Napi::Value LinkedList::Parse(const Napi::CallbackInfo& info) {
 
 
 
-} // namespace LinkedListAddon
+// } // namespace LinkedListAddon
 
 
 
 
+/**
+ * Napi::Object InitAll(Napi::Env env, Napi::Object exports) {
+    
+    LinkedList::Init(env, exports);
+    // linkedlist_pointer::LinkedList::Init(env, exports);
+    return exports;
+}
+
+Napi::Object MODULE_NAME(Napi::Env env, Napi::Object exports) {
+  return InitAll(env, exports);
+}
+
+NODE_API_MODULE(NODE_GYP_MODULE_NAME, MODULE_NAME)
+// } // namespace LinkedListAddon
+
+*/
 
 
 

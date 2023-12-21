@@ -4,7 +4,7 @@
 #include <napi.h>
 #include <sstream>
 
-namespace LinkedListAddon {
+// namespace LinkedListAddon {
 
 class LinkedList : public Napi::ObjectWrap<LinkedList> {
 public:
@@ -33,4 +33,4 @@ public:
 
 };
 
-} // namespace LinkedListAddon
+

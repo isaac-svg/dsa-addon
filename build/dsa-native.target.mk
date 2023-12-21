@@ -94,8 +94,10 @@ INCS_Release := \
 	-I/home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api
 
 OBJS := \
+	$(obj).target/$(TARGET)/src/linkedlist/vector-based/linkedlist.o \
+	$(obj).target/$(TARGET)/src/linkedlist/pointer-based/linkedlist.o \
 	$(obj).target/$(TARGET)/src/dsa.o \
-	$(obj).target/$(TARGET)/src/*/*/*.o
+	$(obj).target/$(TARGET)/src/error-handlers/*.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)
