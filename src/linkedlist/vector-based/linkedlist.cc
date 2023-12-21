@@ -140,10 +140,7 @@ Napi::Value LinkedList::Parse(const Napi::CallbackInfo& info) {
     std::string str = info[0].As<Napi::String>().Utf8Value();
     std::vector<std::string> parsedList;
 
-    // Implement your parsing logic here to convert the string to a list
-    // For example, splitting the string into elements and populating parsedList
-
-    // Dummy logic - replace this with your actual parsing logic
+    //
     std::stringstream ss(str);
     std::string token;
     while (std::getline(ss, token, ',')) {
