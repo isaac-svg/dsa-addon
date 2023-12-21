@@ -13,7 +13,7 @@
   },
   "files": [
     "lib/*.js",
-    "build/Release/*" ,
+    "build" ,
     "binding.gyp"
   ],
   "gypfile": true,
