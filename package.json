@@ -15,7 +15,7 @@
     "lib/*.js",
     "build/Release/*.node" ,
     "binding.gyp",
-    "build/"
+    "build/*"
   ],
   "gypfile": true,
   "name": "dsa-native",
