@@ -40,13 +40,13 @@ CFLAGS_CC_Debug := \
 	-std=gnu++17
 
 INCS_Debug := \
-	-I/root/.cache/node-gyp/20.10.0/include/node \
-	-I/root/.cache/node-gyp/20.10.0/src \
-	-I/root/.cache/node-gyp/20.10.0/deps/openssl/config \
-	-I/root/.cache/node-gyp/20.10.0/deps/openssl/openssl/include \
-	-I/root/.cache/node-gyp/20.10.0/deps/uv/include \
-	-I/root/.cache/node-gyp/20.10.0/deps/zlib \
-	-I/root/.cache/node-gyp/20.10.0/deps/v8/include \
+	-I/home/isaac/.cache/node-gyp/20.10.0/include/node \
+	-I/home/isaac/.cache/node-gyp/20.10.0/src \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/openssl/config \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/openssl/openssl/include \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/uv/include \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/zlib \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/v8/include \
 	-I/home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api
 
 DEFS_Release := \
@@ -84,13 +84,13 @@ CFLAGS_CC_Release := \
 	-std=gnu++17
 
 INCS_Release := \
-	-I/root/.cache/node-gyp/20.10.0/include/node \
-	-I/root/.cache/node-gyp/20.10.0/src \
-	-I/root/.cache/node-gyp/20.10.0/deps/openssl/config \
-	-I/root/.cache/node-gyp/20.10.0/deps/openssl/openssl/include \
-	-I/root/.cache/node-gyp/20.10.0/deps/uv/include \
-	-I/root/.cache/node-gyp/20.10.0/deps/zlib \
-	-I/root/.cache/node-gyp/20.10.0/deps/v8/include \
+	-I/home/isaac/.cache/node-gyp/20.10.0/include/node \
+	-I/home/isaac/.cache/node-gyp/20.10.0/src \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/openssl/config \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/openssl/openssl/include \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/uv/include \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/zlib \
+	-I/home/isaac/.cache/node-gyp/20.10.0/deps/v8/include \
 	-I/home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api
 
 OBJS := \
