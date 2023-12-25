@@ -6,12 +6,14 @@ class Queue : public Napi::ObjectWrap<Queue> {
     Queue(const Napi::CallbackInfo& info);
 
     // Queue methods
-    Napi::Value enqueue(const Napi::CallbackInfo& info);
+  Napi::Value enqueue(const Napi::CallbackInfo& info);
     Napi::Value dequeue(const Napi::CallbackInfo& info);
     Napi::Value peek(const Napi::CallbackInfo& info);
+    Napi::Value front(const Napi::CallbackInfo& info);
     Napi::Value isEmpty(const Napi::CallbackInfo& info);
     Napi::Value size(const Napi::CallbackInfo& info);
-
+    // internal methods
+    Napi::Value Enqueue(const Napi::Value& value);
   private:
     Napi::Value clear(const Napi::CallbackInfo& info);
 

@@ -8,7 +8,8 @@ Release/obj.target/dsa-native/src/dsa.o: ../src/dsa.cc ../src/dsa.h \
  /home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api/napi-inl.h \
  /home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api/napi-inl.deprecated.h \
  ../src/./linkedlist/vector-based/linkedlist.h \
- ../src/./linkedlist/pointer-based/linkedlist.h ../src/./queue/queue.h
+ ../src/./linkedlist/pointer-based/linkedlist.h ../src/./queue/queue.h \
+ ../src/./stack/stack.h
 ../src/dsa.cc:
 ../src/dsa.h:
 /home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api/napi.h:
@@ -21,3 +22,4 @@ Release/obj.target/dsa-native/src/dsa.o: ../src/dsa.cc ../src/dsa.h \
 ../src/./linkedlist/vector-based/linkedlist.h:
 ../src/./linkedlist/pointer-based/linkedlist.h:
 ../src/./queue/queue.h:
+../src/./stack/stack.h:
