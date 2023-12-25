@@ -8,6 +8,7 @@ Napi::Object RegisterModule(Napi::Env env, Napi::Object exports) {
 
     LinkedList::Init(env, exports);
     linkedlist_pointer::LinkedList::Init(env, exports);
+    Queue::Init(env, exports);
     //   Database::Init(env, exports);
     // Statement::Init(env, exports);
     // Backup::Init(env, exports);
