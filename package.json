@@ -27,8 +27,12 @@
   ],
   "gypfile": true,
   "name": "dsa-native",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "Native addons for data sructures and algorithms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaac-svg/dsa-native"
+  },
   "keywords": [
     "Algorithms",
     "Data",
