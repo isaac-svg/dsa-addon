@@ -27,7 +27,7 @@
   ],
   "gypfile": true,
   "name": "dsa-native",
-  "version": "1.1.9",
+  "version": "1.2.9",
   "description": "Native addons for data sructures and algorithms",
   "keywords": [
     "Algorithms",

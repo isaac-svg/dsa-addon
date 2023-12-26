@@ -37,6 +37,7 @@ Napi::Value LinkedList::Push(const Napi::CallbackInfo& info) {
     std::string stringValue = ValueToString(env, value);
 
     list_.push_back(stringValue);
+   
     return value;
 }
 
@@ -90,6 +91,7 @@ Napi::Value LinkedList::Set(const Napi::CallbackInfo& info) {
         return env.Null();
     }
     list_[index] = ValueToString(env, info[1]);
+    std::cout << list_[index]<< std::endl;
     return env.Undefined();
 }
 
@@ -148,37 +150,7 @@ Napi::Value LinkedList::Parse(const Napi::CallbackInfo& info) {
         parsedList.push_back(token);
     }
 
-    // Assuming parsedList is a vector of strings
     list_ = parsedList;
 
     return Napi::Value::From(env, true);
 }
-
-
-
-
-// } // namespace LinkedListAddon
-
-
-
-
-/**
- * Napi::Object InitAll(Napi::Env env, Napi::Object exports) {
-    
-    LinkedList::Init(env, exports);
-    // linkedlist_pointer::LinkedList::Init(env, exports);
-    return exports;
-}
-
-Napi::Object MODULE_NAME(Napi::Env env, Napi::Object exports) {
-  return InitAll(env, exports);
-}
-
-NODE_API_MODULE(NODE_GYP_MODULE_NAME, MODULE_NAME)
-// } // namespace LinkedListAddon
-
-*/
-
-
-
-

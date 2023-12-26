@@ -1,6 +1,7 @@
 #include "linkedlist.h"
 #include "../../error-handlers/argumenterror.h"
 #include "../../error-handlers/exception.h"
+#include <iostream>
 using namespace linkedlist_pointer;
 // namespace linkedlist_pointer {
 
@@ -52,7 +53,7 @@ using namespace linkedlist_pointer;
     Napi::Value LinkedList::peek(const Napi::CallbackInfo& info) {
         Napi::Env env = info.Env();
         if (head != nullptr) {
-            return Napi::String::New(env, head->value);
+            return Napi::Value::From(env, head->value);
         } else {
             return env.Null();
         }
@@ -84,6 +85,8 @@ using namespace linkedlist_pointer;
 
     list_size++;
 
+    
+        // std::string str = Napi::JSONStringify(env, value).Utf8Value();
     return val; 
    }
 

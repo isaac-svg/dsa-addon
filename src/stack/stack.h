@@ -1,23 +1,22 @@
+#ifndef STACK_H
+#define STACK_H
+
 #include <napi.h>
+#include <stack>
 
 class Stack : public Napi::ObjectWrap<Stack> {
 public:
-  static Napi::Object Init(Napi::Env env, Napi::Object exports);
-  Stack(const Napi::CallbackInfo& info);
-
-  Napi::Value push(const Napi::CallbackInfo& info);
-  Napi::Value pop(const Napi::CallbackInfo& info);
-  Napi::Value peek(const Napi::CallbackInfo& info);
-  Napi::Value isEmpty(const Napi::CallbackInfo& info);
-  Napi::Value size(const Napi::CallbackInfo& info);
-  Napi::Value clear(const Napi::CallbackInfo& info); // Optional
+    static Napi::Object Init(Napi::Env env, Napi::Object exports);
+    Stack(const Napi::CallbackInfo& info);
 
 private:
-  struct Node {
-    Napi::Value value;
-    Node* next;
-  };
+    std::stack<std::string> stack_;
 
-  Node* head = nullptr;
-  uint32_t length = 0;
+    Napi::Value Push(const Napi::CallbackInfo& info);
+    Napi::Value Pop(const Napi::CallbackInfo& info);
+    Napi::Value Top(const Napi::CallbackInfo& info);
+    Napi::Value Size(const Napi::CallbackInfo& info);
+    Napi::Value IsEmpty(const Napi::CallbackInfo& info);
 };
+
+#endif // STACK_H

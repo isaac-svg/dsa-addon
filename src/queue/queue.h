@@ -1,29 +1,20 @@
+#pragma once
+#include <queue>
 #include <napi.h>
 
 class Queue : public Napi::ObjectWrap<Queue> {
-  public:
+public:
     static Napi::Object Init(Napi::Env env, Napi::Object exports);
     Queue(const Napi::CallbackInfo& info);
 
-    // Queue methods
-  Napi::Value enqueue(const Napi::CallbackInfo& info);
-    Napi::Value dequeue(const Napi::CallbackInfo& info);
-    Napi::Value peek(const Napi::CallbackInfo& info);
-    Napi::Value front(const Napi::CallbackInfo& info);
-    Napi::Value isEmpty(const Napi::CallbackInfo& info);
-    Napi::Value size(const Napi::CallbackInfo& info);
-    // internal methods
-    Napi::Value Enqueue(const Napi::Value& value);
-  private:
-    Napi::Value clear(const Napi::CallbackInfo& info);
+private:
+    static Napi::FunctionReference constructor;
+    Napi::Value Enqueue(const Napi::CallbackInfo& info);
+    Napi::Value Dequeue(const Napi::CallbackInfo& info);
+    Napi::Value Size(const Napi::CallbackInfo& info);
+    Napi::Value IsEmpty(const Napi::CallbackInfo& info);
+     Napi::Value peek(const Napi::CallbackInfo& info);
+      Napi::Value back(const Napi::CallbackInfo& info);
 
-    struct Node {
-      Napi::Value value;
-      Node* next;
-    };
-
-    Node* head = nullptr;
-    Node* tail = nullptr;
-    int length = 0;
+    std::queue<std::string> queue_;
 };
-

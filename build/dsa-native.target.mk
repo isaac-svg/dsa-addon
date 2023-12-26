@@ -98,7 +98,8 @@ OBJS := \
 	$(obj).target/$(TARGET)/src/linkedlist/pointer-based/linkedlist.o \
 	$(obj).target/$(TARGET)/src/dsa.o \
 	$(obj).target/$(TARGET)/src/error-handlers/*.o \
-	$(obj).target/$(TARGET)/src/queue/queue.o
+	$(obj).target/$(TARGET)/src/queue/queue.o \
+	$(obj).target/$(TARGET)/src/stack/stack.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)
