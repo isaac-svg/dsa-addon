@@ -10,10 +10,11 @@ Napi::Object RegisterModule(Napi::Env env, Napi::Object exports) {
     linkedlist_pointer::LinkedList::Init(env, exports);
     Queue::Init(env, exports);
     Stack::Init(env, exports);
+   QuickSort::Init(env, exports);
+
     
         return exports;
 }
-
 
 }
 
