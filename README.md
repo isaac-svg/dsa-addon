@@ -4,7 +4,7 @@
 
 ## Overview
 
-**dsa-native** `dsa-native` is an npm package providing native implementations of various data structures and algorithms in C++. This package offers efficient and performant implementations of commonly used data structures and algorithms for JavaScript applications, giving developers access to optimized code for handling complex data operations.
+**dsa-native**  is an npm package providing native implementations of various data structures and algorithms in C++. This package offers efficient and performant implementations of commonly used data structures and algorithms for JavaScript applications, giving developers access to optimized code for handling complex data operations.
 
 ## Key Features
 
