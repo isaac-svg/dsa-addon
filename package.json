@@ -27,7 +27,7 @@
   ],
   "gypfile": true,
   "name": "dsa-native",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "description": "Native addons for data structures and algorithms",
   "repository": {
     "type": "git",
