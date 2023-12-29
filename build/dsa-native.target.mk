@@ -47,7 +47,7 @@ INCS_Debug := \
 	-I/home/isaac/.cache/node-gyp/20.10.0/deps/uv/include \
 	-I/home/isaac/.cache/node-gyp/20.10.0/deps/zlib \
 	-I/home/isaac/.cache/node-gyp/20.10.0/deps/v8/include \
-	-I/home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api
+	-I/home/isaac/Desktop/software_engineering/npm_packages/dsa-native/node_modules/node-addon-api
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=dsa-native' \
@@ -91,7 +91,7 @@ INCS_Release := \
 	-I/home/isaac/.cache/node-gyp/20.10.0/deps/uv/include \
 	-I/home/isaac/.cache/node-gyp/20.10.0/deps/zlib \
 	-I/home/isaac/.cache/node-gyp/20.10.0/deps/v8/include \
-	-I/home/isaac/Desktop/software_engineering/npm_packages/dsa-addon/node_modules/node-addon-api
+	-I/home/isaac/Desktop/software_engineering/npm_packages/dsa-native/node_modules/node-addon-api
 
 OBJS := \
 	$(obj).target/$(TARGET)/src/linkedlist/vector-based/linkedlist.o \

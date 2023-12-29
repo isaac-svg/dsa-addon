@@ -13,31 +13,27 @@
   },
   "files": [
     "lib/*.js",
-    "build/Release/*.node" ,
+    "build/Release/*.node",
     "binding.gyp",
     "build/Release/obj.target/dsa-native/src/error-handlers/*.o",
     "build/Release/*/*/*/*/*/*.o",
-    
     "build/Release/obj.target/dsa-native/src/dsa.o",
     "build/dsa-native.target.mk",
     "build/config.gypi",
     "build/binding.Makefile"
-    
-
   ],
   "gypfile": true,
   "name": "dsa-native",
-  "version": "1.2.17",
+  "version": "1.2.18",
   "description": "Native addons for data structures and algorithms",
   "repository": {
     "type": "git",
     "url": "https://github.com/isaac-svg/dsa-native.git"
   },
-  
   "bugs": {
-      "url": "https://github.com/isaac-svg/dsa-native.git",
-      "email": "isaacsakyi009@gmail.com"
-    },
+    "url": "https://github.com/isaac-svg/dsa-native.git",
+    "email": "isaacsakyi009@gmail.com"
+  },
   "keywords": [
     "Algorithms",
     "Data",
