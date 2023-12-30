@@ -10,6 +10,8 @@ Release/obj.target/dsa-native/src/dsa.o: ../src/dsa.cc ../src/dsa.h \
  ../src/./linkedlist/vector-based/linkedlist.h \
  ../src/./linkedlist/pointer-based/linkedlist.h ../src/./queue/queue.h \
  ../src/./stack/stack.h ../src/./sorting-algorithms/quicksort.h \
+ ../src/./sorting-algorithms/mergesort/mergesort.h \
+ ../src/./sorting-algorithms/mergesort/worker.h \
  ../src/./sorting-algorithms/mergesort/mergesort.h
 ../src/dsa.cc:
 ../src/dsa.h:
@@ -25,4 +27,6 @@ Release/obj.target/dsa-native/src/dsa.o: ../src/dsa.cc ../src/dsa.h \
 ../src/./queue/queue.h:
 ../src/./stack/stack.h:
 ../src/./sorting-algorithms/quicksort.h:
+../src/./sorting-algorithms/mergesort/mergesort.h:
+../src/./sorting-algorithms/mergesort/worker.h:
 ../src/./sorting-algorithms/mergesort/mergesort.h:

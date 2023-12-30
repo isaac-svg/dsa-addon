@@ -1,5 +1,4 @@
 #include "mergesort.h"
-#include "worker.h"
 #include <vector>
 #include <iostream>
 #include <algorithm>
@@ -21,42 +20,49 @@ MergeSort::MergeSort(const Napi::CallbackInfo& info) : Napi::ObjectWrap<MergeSor
 
 Napi::Value MergeSort::bubblesort(const Napi::CallbackInfo& info) {
     
-      Napi::Env env = info.Env();
-
-   
-
-    if (info[0].IsFunction()){
-        // will sort by comparator
-    std::sort(data_.begin(), data_.end());
-    }else{
-        //  std::sort(data_.begin(), data_.end());
-            mergeSort(data_, 0, data_.size() - 1);
-    }
-
+    Napi::Env env = info.Env();
+    
+    mergeSort(data_, 0, data_.size() - 1);
+    
     Napi::Array resultArray = Napi::Array::New(env, data_.size());
     for (size_t i = 0; i < data_.size(); ++i) {
-        resultArray.Set(i, Napi::Number::New(env, data_[i]));
+        resultArray.Set(i, Napi::String::New(env, data_[i]));
     }
     return resultArray;
 }
+// Custom comparator function
+bool MergeSort::compare(const std::string& a, const std::string& b) {
+    bool isANumber = !a.empty() && std::all_of(a.begin(), a.end(), ::isdigit);
+    bool isBNumber = !b.empty() && std::all_of(b.begin(), b.end(), ::isdigit);
 
-void MergeSort::merge(std::vector<double>& arr, int left, int mid, int right) {
+    if (isANumber && isBNumber) {
+        return std::stoi(a) < std::stoi(b);
+    } else if (!isANumber && !isBNumber) {
+        return a < b;
+    } else {
+        // Handling comparisons between numbers and strings
+        return isANumber;
+    }
+}
+void MergeSort::merge(std::vector<std::string>& arr, int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
 
-    // Create temporary arrays
-    std::vector<int> L(n1), R(n2);
+    std::vector<std::string> L(n1), R(n2);
 
-    // Copy data to temporary arrays L[] and R[]
     for (int i = 0; i < n1; ++i)
         L[i] = arr[left + i];
     for (int j = 0; j < n2; ++j)
         R[j] = arr[mid + 1 + j];
 
-    // Merge the temporary arrays back into arr[left..right]
     int i = 0, j = 0, k = left;
     while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
+        // Check if L[i] and R[j] are numbers
+        bool isLeftNumber = isdigit(L[i][0]);
+        bool isRightNumber = isdigit(R[j][0]);
+
+        while (i < n1 && j < n2) {
+        if (compare(L[i], R[j])) {
             arr[k] = L[i];
             ++i;
         } else {
@@ -65,15 +71,15 @@ void MergeSort::merge(std::vector<double>& arr, int left, int mid, int right) {
         }
         ++k;
     }
+        ++k;
+    }
 
-    // Copy the remaining elements of L[], if any
     while (i < n1) {
         arr[k] = L[i];
         ++i;
         ++k;
     }
 
-    // Copy the remaining elements of R[], if any
     while (j < n2) {
         arr[k] = R[j];
         ++j;
@@ -81,15 +87,13 @@ void MergeSort::merge(std::vector<double>& arr, int left, int mid, int right) {
     }
 }
 
-void  MergeSort::mergeSort(std::vector<double>& arr, int left, int right) {
+void MergeSort::mergeSort(std::vector<std::string>& arr, int left, int right) {
     if (left < right) {
         int mid = left + (right - left) / 2;
 
-        // Sort first and second halves
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
 
-        // Merge the sorted halves
         merge(arr, left, mid, right);
     }
 }
