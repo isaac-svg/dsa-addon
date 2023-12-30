@@ -9,7 +9,8 @@ Release/obj.target/dsa-native/src/dsa.o: ../src/dsa.cc ../src/dsa.h \
  /home/isaac/Desktop/software_engineering/npm_packages/dsa-native/node_modules/node-addon-api/napi-inl.deprecated.h \
  ../src/./linkedlist/vector-based/linkedlist.h \
  ../src/./linkedlist/pointer-based/linkedlist.h ../src/./queue/queue.h \
- ../src/./stack/stack.h ../src/./sorting-algorithms/quicksort.h
+ ../src/./stack/stack.h ../src/./sorting-algorithms/quicksort.h \
+ ../src/./sorting-algorithms/mergesort/mergesort.h
 ../src/dsa.cc:
 ../src/dsa.h:
 /home/isaac/Desktop/software_engineering/npm_packages/dsa-native/node_modules/node-addon-api/napi.h:
@@ -24,3 +25,4 @@ Release/obj.target/dsa-native/src/dsa.o: ../src/dsa.cc ../src/dsa.h \
 ../src/./queue/queue.h:
 ../src/./stack/stack.h:
 ../src/./sorting-algorithms/quicksort.h:
+../src/./sorting-algorithms/mergesort/mergesort.h:

@@ -6,3 +6,4 @@
 #include "./queue/queue.h"
 #include "./stack/stack.h"
 #include "./sorting-algorithms/quicksort.h"
+#include "./sorting-algorithms/mergesort/mergesort.h"
