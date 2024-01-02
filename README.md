@@ -32,6 +32,7 @@ const {
   Stack,
   Queue,
   quickSort,
+  quickSortAsync,
 } = require("dsa-native");
 
 // Usage examples will be available once the methods are fully implemented.
@@ -53,9 +54,11 @@ const queue = new Queue();
 // Perform operations with Queue methods
 
 // quickSort example
-const arr = [2, 1, 3, 4, 1, 2, 34, 1, 213, 2222, 34, 5, 6, 7, 8, 0];
-
-quicksortAsync(arr, (a, b) => a > b).then((data) => console.log(data));
+const arr = [2, 1, 3, 4, 1, 2, "34", 1, "213", 2222, 34, 5, 6, "7", 8, 0];
+// asynchronous method
+quicksortAsync(arr).then((data) => console.log(data));
+// synchronous method
+const result = quickSort(arr);
 
 // Merge sort
 // Merge sort methods usage will be shown once implemented
