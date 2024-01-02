@@ -11,6 +11,8 @@ Napi::Object RegisterModule(Napi::Env env, Napi::Object exports) {
     Queue::Init(env, exports);
     Stack::Init(env, exports);
    QuickSort::Init(env, exports);
+   QuickSort::Init(env, exports);
+
     MergeSort::Init(env, exports);
     
         return exports;

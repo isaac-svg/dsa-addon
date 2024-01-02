@@ -100,7 +100,7 @@ OBJS := \
 	$(obj).target/$(TARGET)/src/error-handlers/*.o \
 	$(obj).target/$(TARGET)/src/queue/queue.o \
 	$(obj).target/$(TARGET)/src/stack/stack.o \
-	$(obj).target/$(TARGET)/src/sorting-algorithms/*.o \
+	$(obj).target/$(TARGET)/src/sorting-algorithms/quicksort.o \
 	$(obj).target/$(TARGET)/src/sorting-algorithms/mergesort/mergesort.o
 
 # Add to the list of files we specially track dependencies for.

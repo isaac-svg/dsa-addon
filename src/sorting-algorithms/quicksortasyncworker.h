@@ -10,12 +10,21 @@ class QuickSortAsync : public Napi ::AsyncWorker {
         m_deferred{env}, data{res} {
 
         len =  data.Length();
-        Vect.resize(len);
-
         // copy the aray values into the  vector
-        for (size_t i = 0; i < len; i++) {
-            Vect[i] = data.Get(i).As<Napi::Number>().DoubleValue();
+    for (size_t i = 0; i < len; i++)
+    {
+        Napi::Value value = data.Get(i);
+
+        if (value.IsString()){
+            mixedVect.push_back(value.As<Napi::String>().Utf8Value());
+           
         }
+        else if(value.IsNumber()){
+            mixedVect.push_back(value.As<Napi::Number>().Int32Value());
+            
+        }
+        
+    }
     }
 
     // overload the constructor to take a comparator
@@ -32,7 +41,7 @@ class QuickSortAsync : public Napi ::AsyncWorker {
    */
   void Execute() override {
 
-    std::sort(Vect.begin(), Vect.end());
+    std::sort(mixedVect.begin(), mixedVect.end(),QuickSort::VariantComparator());
       
   }
 
@@ -49,10 +58,15 @@ class QuickSortAsync : public Napi ::AsyncWorker {
         for (size_t i = 0; i < len; i++)
         {
             
-            result.Set(i, Vect[i]);
+             if (std::holds_alternative<int>(mixedVect.at(i))){
+            result.Set(i, Napi::Number::New(env, std::get<int>(mixedVect.at(i))));
+        }
+        else if (std::holds_alternative<std::string>(mixedVect.at(i))){
+            result.Set(i, Napi::String::New(env, std::get<std::string>(mixedVect.at(i))));
+        }
         }
         
-        
+        mixedVect ={};
         
     m_deferred.Resolve(Napi::Array::From(Env(), result));
    }
@@ -66,6 +80,7 @@ class QuickSortAsync : public Napi ::AsyncWorker {
   Napi::Promise::Deferred m_deferred;
   Napi::Array data;
   std::vector<double> Vect;
+  std::vector<std::variant<int, std::string>> mixedVect;
   size_t len;
   Napi::Number sortby;
   
